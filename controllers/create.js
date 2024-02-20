@@ -2,8 +2,8 @@ import Book from "../models/book.js";
 
 async function createBook(req, res){
   try {
-    const { titulo, categoria, descripcion} = req.body;
-    const newBook = new Book({ titulo, categoria, descripcion });
+    const { estado, vehiculo, cliente, fecha, pago, total} = req.body;
+    const newBook = new Book({ estado, vehiculo, cliente, fecha, pago, total });
     await newBook.save();
     res.status(201).json(newBook);
   } catch (error) {
