@@ -6,6 +6,7 @@ const bookSchema = new mongoose.Schema({
   cliente: { type: String, required: true },
   fecha: { type: String, required: true },
   total: { type: String, required: true },
+  cuil: { type: String, required: true },
 });
 
 const Book = mongoose.model('Book', bookSchema);
